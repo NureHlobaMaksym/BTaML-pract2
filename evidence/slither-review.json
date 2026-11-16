@@ -1,0 +1,53 @@
+{
+  "slitherVersion": "0.11.6",
+  "findings": [
+    {
+      "id": "1e4baffa0a09aead91cbe4eb6897cf2dfce380caeeb42faeebe29bdb8992f2d9",
+      "check": "timestamp",
+      "impact": "Low",
+      "description": "Crowdfunding.contribute(uint256) (contracts/Crowdfunding.sol#100-107) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- campaign.state != State.Active || block.timestamp >= campaign.deadline (contracts/Crowdfunding.sol#102)\n",
+      "status": "reviewed",
+      "rationale": "Дедлайни та строк дії підписів навмисно залежать від block.timestamp. Час не використовується як випадковість; граничні секунди та прострочення перевірені тестами. Включення транзакції до блоку може відбутися пізніше за натискання кнопки."
+    },
+    {
+      "id": "91dffee638658750ebc723fde2e8ef55e23c54fe1e0bb59adb14f29c88cbadd4",
+      "check": "timestamp",
+      "impact": "Low",
+      "description": "Crowdfunding.createCampaignBySignature(address,string,uint256,uint64,uint256,bytes) (contracts/Crowdfunding.sol#88-96) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp > expiresAt (contracts/Crowdfunding.sol#89)\n",
+      "status": "reviewed",
+      "rationale": "Дедлайни та строк дії підписів навмисно залежать від block.timestamp. Час не використовується як випадковість; граничні секунди та прострочення перевірені тестами. Включення транзакції до блоку може відбутися пізніше за натискання кнопки."
+    },
+    {
+      "id": "9f9c197d18f3a48ef01ab797895b54f1891d2fb95756bd11c6b9a035b2d213a9",
+      "check": "timestamp",
+      "impact": "Low",
+      "description": "Crowdfunding.finalize(uint256) (contracts/Crowdfunding.sol#111-117) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp < campaign.deadline (contracts/Crowdfunding.sol#114)\n",
+      "status": "reviewed",
+      "rationale": "Дедлайни та строк дії підписів навмисно залежать від block.timestamp. Час не використовується як випадковість; граничні секунди та прострочення перевірені тестами. Включення транзакції до блоку може відбутися пізніше за натискання кнопки."
+    },
+    {
+      "id": "e2176260df99fd170e7e792c36e5e8e45e8c0909a8cd1177486b58894ed2d311",
+      "check": "timestamp",
+      "impact": "Low",
+      "description": "Crowdfunding._create(address,string,uint256,uint64) (contracts/Crowdfunding.sol#190-198) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- deadline <= block.timestamp || deadline > block.timestamp + MAX_DURATION (contracts/Crowdfunding.sol#194)\n",
+      "status": "reviewed",
+      "rationale": "Дедлайни та строк дії підписів навмисно залежать від block.timestamp. Час не використовується як випадковість; граничні секунди та прострочення перевірені тестами. Включення транзакції до блоку може відбутися пізніше за натискання кнопки."
+    },
+    {
+      "id": "2b7593efbfeecbca36118c15e316f5f040183bb71ee7601e7acc549c3a6599a0",
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "description": "Low level call in Crowdfunding.refund(uint256) (contracts/Crowdfunding.sol#136-145):\n\t- (sent,None) = address(msg.sender).call{value: amount}() (contracts/Crowdfunding.sol#143)\n",
+      "status": "reviewed",
+      "rationale": "Pull-виплата виконується через call для підтримки контрактних гаманців. Стан змінено до виклику, результат перевірено, nonReentrant блокує повторний вхід; тести перевіряють атаку та відмову отримувача."
+    },
+    {
+      "id": "fc72ba7ff241cbb2a63df84e73836992c6eff17e506d84caf51b5ce2d7daff70",
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "description": "Low level call in Crowdfunding.withdrawFunds(uint256) (contracts/Crowdfunding.sol#122-131):\n\t- (sent,None) = address(msg.sender).call{value: amount}() (contracts/Crowdfunding.sol#129)\n",
+      "status": "reviewed",
+      "rationale": "Pull-виплата виконується через call для підтримки контрактних гаманців. Стан змінено до виклику, результат перевірено, nonReentrant блокує повторний вхід; тести перевіряють атаку та відмову отримувача."
+    }
+  ]
+}

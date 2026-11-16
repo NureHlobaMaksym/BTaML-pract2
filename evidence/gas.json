@@ -1,0 +1,149 @@
+[
+  {
+    "function": "deployment",
+    "calls": 8,
+    "min": 154479,
+    "max": 1897649,
+    "average": 649079
+  },
+  {
+    "function": "RewardToken.grantRole",
+    "calls": 1,
+    "min": 51512,
+    "max": 51512,
+    "average": 51512
+  },
+  {
+    "function": "CreatorRegistry.grantRole",
+    "calls": 2,
+    "min": 51472,
+    "max": 51472,
+    "average": 51472
+  },
+  {
+    "function": "CreatorRegistry.revokeRole",
+    "calls": 1,
+    "min": 29530,
+    "max": 29530,
+    "average": 29530
+  },
+  {
+    "function": "Crowdfunding.createCampaign",
+    "calls": 37,
+    "min": 108750,
+    "max": 216960,
+    "average": 127846
+  },
+  {
+    "function": "Crowdfunding.contribute",
+    "calls": 26,
+    "min": 42891,
+    "max": 77091,
+    "average": 75117
+  },
+  {
+    "function": "Crowdfunding.finalize",
+    "calls": 23,
+    "min": 34976,
+    "max": 34986,
+    "average": 34980
+  },
+  {
+    "function": "Crowdfunding.claimReward",
+    "calls": 5,
+    "min": 107068,
+    "max": 107231,
+    "average": 107133
+  },
+  {
+    "function": "RewardToken.transfer",
+    "calls": 1,
+    "min": 51516,
+    "max": 51516,
+    "average": 51516
+  },
+  {
+    "function": "Crowdfunding.pause",
+    "calls": 4,
+    "min": 50299,
+    "max": 50299,
+    "average": 50299
+  },
+  {
+    "function": "Crowdfunding.unpause",
+    "calls": 1,
+    "min": 28421,
+    "max": 28421,
+    "average": 28421
+  },
+  {
+    "function": "Crowdfunding.withdrawFunds",
+    "calls": 4,
+    "min": 42434,
+    "max": 42434,
+    "average": 42434
+  },
+  {
+    "function": "Crowdfunding.refund",
+    "calls": 5,
+    "min": 37579,
+    "max": 37579,
+    "average": 37579
+  },
+  {
+    "function": "RewardToken.revokeRole",
+    "calls": 1,
+    "min": 29570,
+    "max": 29570,
+    "average": 29570
+  },
+  {
+    "function": "Crowdfunding.createCampaignBySignature",
+    "calls": 2,
+    "min": 159489,
+    "max": 159489,
+    "average": 159489
+  },
+  {
+    "function": "VulnerableRefund.deposit",
+    "calls": 1,
+    "min": 43477,
+    "max": 43477,
+    "average": 43477
+  },
+  {
+    "function": "RefundAttacker.deposit",
+    "calls": 3,
+    "min": 55913,
+    "max": 89442,
+    "average": 72565
+  },
+  {
+    "function": "RefundAttacker.attack",
+    "calls": 2,
+    "min": 59498,
+    "max": 82712,
+    "average": 71105
+  },
+  {
+    "function": "RefundAttacker.setRejectPayments",
+    "calls": 3,
+    "min": 21796,
+    "max": 43708,
+    "average": 36404
+  },
+  {
+    "function": "RefundAttacker.create",
+    "calls": 1,
+    "min": 129462,
+    "max": 129462,
+    "average": 129462
+  },
+  {
+    "function": "RefundAttacker.withdraw",
+    "calls": 1,
+    "min": 47992,
+    "max": 47992,
+    "average": 47992
+  }
+]

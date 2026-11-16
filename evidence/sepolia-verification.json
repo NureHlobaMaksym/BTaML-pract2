@@ -1,0 +1,23 @@
+[
+  {
+    "name": "CreatorRegistry",
+    "address": "0x1e105eA28d9CCBed07A615Ab5405eF95831994Ca",
+    "url": "https://sepolia.etherscan.io/address/0x1e105eA28d9CCBed07A615Ab5405eF95831994Ca#code",
+    "verified": true,
+    "guid": "rh7mg85fyw5evkr7mui1sjsrmtqqqwbd7rppybq7hsqmttdsc7"
+  },
+  {
+    "name": "RewardToken",
+    "address": "0x9096fbf9d56ec6De8E2264E9365D732885FD5336",
+    "url": "https://sepolia.etherscan.io/address/0x9096fbf9d56ec6De8E2264E9365D732885FD5336#code",
+    "verified": true,
+    "guid": "2ufga7rgznjgquis75w38c4bjzt6pjfxmjuixrggxib3p2um3b"
+  },
+  {
+    "name": "Crowdfunding",
+    "address": "0x09f20fE3C088aC23840a24c893f909761cE4f994",
+    "url": "https://sepolia.etherscan.io/address/0x09f20fE3C088aC23840a24c893f909761cE4f994#code",
+    "verified": true,
+    "guid": "kzvayrr4nbelsgzctf1buhqfvrr2nhvx3myhcdk4it4v3lrvub"
+  }
+]

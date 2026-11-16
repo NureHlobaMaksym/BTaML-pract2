@@ -1,0 +1,41 @@
+{
+  "method": "identical inputs; executionGas excludes calldata intrinsic gas to remove signature-byte variance; baselines alter only storage packing or immutable dependency addresses",
+  "rows": [
+    {
+      "contract": "Crowdfunding",
+      "function": "createCampaign",
+      "gas": 193935,
+      "executionGas": 170895
+    },
+    {
+      "contract": "Crowdfunding",
+      "function": "createCampaignBySignature",
+      "gas": 210455,
+      "executionGas": 185427
+    },
+    {
+      "contract": "UnpackedCrowdfunding",
+      "function": "createCampaign",
+      "gas": 218010,
+      "executionGas": 194970
+    },
+    {
+      "contract": "UnpackedCrowdfunding",
+      "function": "createCampaignBySignature",
+      "gas": 234494,
+      "executionGas": 209466
+    },
+    {
+      "contract": "StorageDependenciesCrowdfunding",
+      "function": "createCampaign",
+      "gas": 196029,
+      "executionGas": 172989
+    },
+    {
+      "contract": "StorageDependenciesCrowdfunding",
+      "function": "createCampaignBySignature",
+      "gas": 212537,
+      "executionGas": 187521
+    }
+  ]
+}

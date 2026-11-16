@@ -1,0 +1,3 @@
+services:
+  api:
+    command: ["node", "--import", "tsx", "apps/api/src/main.ts"]

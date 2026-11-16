@@ -1,0 +1,2 @@
+export const INDEX_BLOCK_BATCH_SIZE = 2000;
+export const INDEX_TIMESTAMP_CONCURRENCY = 8;

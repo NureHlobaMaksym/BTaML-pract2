@@ -1,0 +1,10 @@
+{
+  "chainId": 11155111,
+  "blockNumber": 12148440,
+  "blockHash": "0xf6d94b9dc4d27613bf56b9ce2f2beac24c065c6d794cc264af504e95579d71a2",
+  "contracts": {
+    "registry": "0x1e105eA28d9CCBed07A615Ab5405eF95831994Ca",
+    "token": "0x9096fbf9d56ec6De8E2264E9365D732885FD5336",
+    "crowdfunding": "0x09f20fE3C088aC23840a24c893f909761cE4f994"
+  }
+}

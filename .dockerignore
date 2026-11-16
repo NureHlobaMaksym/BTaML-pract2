@@ -1,0 +1,17 @@
+**
+!package.json
+!package-lock.json
+!hardhat.config.ts
+!contracts/
+!contracts/**
+!scripts/
+!scripts/compile.ts
+!scripts/api-sepolia.ts
+!shared/
+!shared/**
+!apps/
+!apps/api/
+!apps/api/src/
+!apps/api/src/**
+**/.env
+**/.env.*

@@ -1,0 +1,59 @@
+{
+  "name": "btaml-pract2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "docker compose up -d --build --wait --force-recreate api",
+    "start:local": "docker compose -f compose.yaml -f compose.local.yaml up -d --build --wait --force-recreate api",
+    "stop": "docker compose down",
+    "logs": "docker compose logs -f api",
+    "compile": "node --import tsx scripts/compile.ts",
+    "node": "hardhat node",
+    "deploy:local": "node --import tsx scripts/deploy.ts",
+    "deploy:sepolia": "NETWORK=sepolia node --import tsx scripts/deploy.ts",
+    "verify:sepolia": "node --import tsx scripts/verify.ts",
+    "test": "node --import tsx --test --test-concurrency=1 test/*.test.ts",
+    "coverage": "node --import tsx scripts/run-coverage.ts",
+    "gas": "GAS=true node --import tsx --test --test-concurrency=1 test/*.test.ts",
+    "gas:compare": "node --import tsx scripts/compare-gas.ts",
+    "api": "node --import tsx apps/api/src/main.ts",
+    "web": "vite --config apps/web/vite.config.ts",
+    "build": "npm run compile && npm run typecheck && vite build --config apps/web/vite.config.ts",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p apps/web/tsconfig.json",
+    "test:api": "node --import tsx --test --test-timeout=60000 apps/api/test/*.test.ts",
+    "check:coverage": "node --import tsx scripts/check-coverage.ts",
+    "slither": "node --import tsx scripts/slither.ts",
+    "demo": "node --import tsx scripts/demo.ts",
+    "deploy:simulation": "NETWORK=hardhat node --import tsx scripts/deploy.ts",
+    "check:sepolia": "node --import tsx scripts/check-sepolia.ts",
+    "api:sepolia": "node --import tsx scripts/api-sepolia.ts",
+    "db:up": "docker compose up -d --wait postgres",
+    "db:down": "docker compose down",
+    "db:migrate": "node --import tsx scripts/migrate-database.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.6.1",
+    "cors": "2.8.5",
+    "dotenv": "16.6.1",
+    "ethers": "6.17.0",
+    "express": "5.1.0",
+    "pg": "8.23.1",
+    "tsx": "4.22.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@nomicfoundation/edr": "0.25.0",
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.6",
+    "@types/node": "22.19.19",
+    "@types/pg": "8.23.1",
+    "hardhat": "3.21.2",
+    "solc": "0.8.38",
+    "typescript": "5.9.3",
+    "vite": "7.3.1"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

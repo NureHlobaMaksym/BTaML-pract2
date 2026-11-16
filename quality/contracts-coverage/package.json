@@ -1,0 +1,9 @@
+{
+  "name": "btaml-contract-coverage",
+  "private": true,
+  "devDependencies": {
+    "hardhat": "2.26.3",
+    "solidity-coverage": "0.8.17",
+    "tsx": "4.22.0"
+  }
+}
